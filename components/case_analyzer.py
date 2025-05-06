@@ -54,7 +54,7 @@ def case_analyzer(vector_store, language):
     
     # Voice input through file upload
     st.write(upload_text)
-    audio_file = st.file_uploader("", type=["wav", "mp3", "ogg"], key="case_audio_upload")
+    audio_file = st.file_uploader("Audio Upload", type=["wav", "mp3", "ogg"], key="case_audio_upload", label_visibility="collapsed")
     
     if audio_file is not None and "case_audio_processed" not in st.session_state:
         with st.spinner(transcribing_text):

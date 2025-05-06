@@ -78,7 +78,7 @@ def document_creator(vector_store, language):
         transcribing_text = "جاري نسخ الصوت..."
     
     st.write(upload_text)
-    audio_file = st.file_uploader("", type=["wav", "mp3", "ogg"], key="doc_audio_upload")
+    audio_file = st.file_uploader("Audio Upload", type=["wav", "mp3", "ogg"], key="doc_audio_upload", label_visibility="collapsed")
     
     if audio_file is not None and "doc_audio_processed" not in st.session_state:
         with st.spinner(transcribing_text):
