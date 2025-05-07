@@ -1,0 +1,85 @@
+2025-05-07 20:55:17,591 - semgrep.notifications - WARNING - METRICS: Using configs from the Registry (like --config=p/ci) reports pseudonymous rule metrics to semgrep.dev.
+To disable Registry rule metrics, use "--metrics=off".
+Using configs only from local files (like --config=xyz.yml) does not enable metrics.
+
+More information: https://semgrep.dev/docs/metrics
+
+2025-05-07 20:55:17,592 - semgrep.run_scan - DEBUG - semgrep version 1.2.0
+2025-05-07 20:55:17,596 - semgrep.config_resolver - DEBUG - Loading local config from /home/runner/workspace/.config/.semgrep/semgrep_rules.json
+2025-05-07 20:55:17,598 - semgrep.config_resolver - DEBUG - Done loading local config from /home/runner/workspace/.config/.semgrep/semgrep_rules.json
+2025-05-07 20:55:17,602 - semgrep.config_resolver - DEBUG - Saving rules to /tmp/semgrep-14z0htsx.rules
+2025-05-07 20:55:17,834 - semgrep.semgrep_core - DEBUG - Failed to open resource semgrep-core-proprietary: [Errno 2] No such file or directory: '/tmp/_MEIubH7Cx/semgrep/bin/semgrep-core-proprietary'.
+2025-05-07 20:55:18,595 - semgrep.rule_lang - DEBUG - semgrep-core validation response: valid=True
+2025-05-07 20:55:18,595 - semgrep.rule_lang - DEBUG - semgrep-core validation succeeded
+2025-05-07 20:55:18,595 - semgrep.rule_lang - DEBUG - RPC validation succeeded
+2025-05-07 20:55:18,595 - semgrep.config_resolver - DEBUG - loaded 1 configs in 0.999610424041748
+2025-05-07 20:55:18,784 - semgrep.run_scan - VERBOSE - running 1250 rules from 1 config /home/runner/workspace/.config/.semgrep/semgrep_rules.json_0
+2025-05-07 20:55:18,784 - semgrep.run_scan - VERBOSE - No .semgrepignore found. Using default .semgrepignore rules. See the docs for the list of default ignores: https://semgrep.dev/docs/cli-usage/#ignore-files
+2025-05-07 20:55:18,786 - semgrep.run_scan - VERBOSE - Rules:
+2025-05-07 20:55:18,786 - semgrep.run_scan - VERBOSE - <SKIPPED DATA (too many entries; use --max-log-list-entries)>
+2025-05-07 20:55:19,119 - semgrep.core_runner - DEBUG - Passing whole rules directly to semgrep_core
+2025-05-07 20:55:19,278 - semgrep.core_runner - DEBUG - Running Semgrep engine with command:
+2025-05-07 20:55:19,278 - semgrep.core_runner - DEBUG - /tmp/_MEIubH7Cx/semgrep/bin/opengrep-core -json -rules /tmp/tmp7_jdpd_a.json -j 8 -targets /tmp/tmpa15vq95a -timeout 5 -timeout_threshold 3 -max_memory 0 -fast
+2025-05-07 20:55:22,262 - semgrep.core_runner - DEBUG - --- semgrep-core stderr ---
+[00.06][[34mINFO[0m]: Executed as: /tmp/_MEIubH7Cx/semgrep/bin/opengrep-core -json -rules /tmp/tmp7_jdpd_a.json -j 8 -targets /tmp/tmpa15vq95a -timeout 5 -timeout_threshold 3 -max_memory 0 -fast
+[00.06][[34mINFO[0m]: Version: 1.2.0
+[00.06][[34mINFO[0m]: Parsing rules in /tmp/tmp7_jdpd_a.json
+[00.73][[34mINFO[0m]: scan: processing 233 files (skipping 0), with 554 rules (skipping 0 )
+[02.34][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.python.boto3.security.hardcoded-token file: components/document_qa.py func: document_qa:-1]
+[0m[02.95][[34mINFO[0m]: Custom ignore pattern: None
+[02.95][[34mINFO[0m]: Custom ignore pattern: None
+--- end semgrep-core stderr ---
+2025-05-07 20:55:22,269 - semgrep.core_runner - DEBUG - semgrep ran in 0:00:03.150054 on 109 files
+2025-05-07 20:55:22,271 - semgrep.core_runner - DEBUG - findings summary: 0 warning, 0 error, 0 info
+2025-05-07 20:55:22,274 - semgrep.app.auth - DEBUG - Getting API token from settings file
+2025-05-07 20:55:22,274 - semgrep.app.auth - DEBUG - No API token found in settings file
+2025-05-07 20:55:22,274 - semgrep.semgrep_core - DEBUG - Failed to open resource semgrep-core-proprietary: [Errno 2] No such file or directory: '/tmp/_MEIubH7Cx/semgrep/bin/semgrep-core-proprietary'.
+2025-05-07 20:55:22,377 - semgrep.output - VERBOSE - 
+========================================
+Files skipped:
+========================================
+
+  Always skipped by Opengrep:
+
+   • <none>
+
+  Skipped by .gitignore:
+  (Disable by passing --no-git-ignore)
+
+   • <all files not listed by `git ls-files` were skipped>
+
+  Skipped by .semgrepignore:
+  - https://semgrep.dev/docs/ignoring-files-folders-code/#understand-semgrep-defaults
+
+   • <none>
+
+  Skipped by --include patterns:
+
+   • <none>
+
+  Skipped by --exclude patterns:
+
+   • <none>
+
+  Files skipped due to insufficient read permissions:
+
+   • <none>
+
+  Skipped by limiting to files smaller than 1000000 bytes:
+  (Adjust with the --max-target-bytes flag)
+
+   • data/Law1.pdf
+
+  Partially analyzed due to parsing or internal Opengrep errors
+
+   • <none>
+
+2025-05-07 20:55:22,378 - semgrep.output - INFO - Some files were skipped or only partially analyzed.
+  Scan was limited to files tracked by git.
+  Scan skipped: 1 files larger than 1.0 MB
+  For a full list of skipped files, run opengrep with the --verbose flag.
+
+Ran 489 rules on 109 files: 0 findings.
+2025-05-07 20:55:22,379 - semgrep.app.version - DEBUG - Version cache does not exist
+2025-05-07 20:55:22,379 - semgrep.app.version - DEBUG - Version cache does not exist
+2025-05-07 20:55:22,400 - semgrep.metrics - VERBOSE - Not sending pseudonymous metrics since metrics are configured to OFF and registry usage is False
