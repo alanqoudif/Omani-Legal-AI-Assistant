@@ -40,8 +40,8 @@
 
 1. استنساخ المستودع | Clone the repository:
 ```bash
-git clone https://github.com/yourusername/PdfIntelligence.git
-cd PdfIntelligence
+git clone git@github.com:alanqoudif/Omani-Legal-AI-Assistant.git
+cd Omani-Legal-AI-Assistant
 ```
 
 2. تثبيت المتطلبات | Install requirements:
